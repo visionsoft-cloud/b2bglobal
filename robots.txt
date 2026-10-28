@@ -1,0 +1,12 @@
+# ============================================================
+# robots.txt for SPH DATA
+# ============================================================
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+
+# Sitemap reference
+Sitemap: https://www.sphdatallc.com/sitemap.xml

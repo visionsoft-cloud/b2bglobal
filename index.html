@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>B2B DATA GLOBAL LLC | Verified B2B Mailing Lists, Attendees &amp; Data Solutions</title>
+  <meta name="description" content="Campaign-ready attendee and exhibitor lists, verified B2B email contacts across 16 industries and 170+ countries. 7-step verification, 7-day refresh cycle, 95% deliverability." />
+  <link rel="icon" type="image/png" href="brand/favicon-5-gold-globe.png" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- Top Scroll Progress Bar -->
+  <div class="progress" id="scrollBar"></div>
+
+  <!-- Header & Navigation -->
+  <header>
+    <div class="wrap">
+      <nav>
+        <a class="brand" href="index.html">
+          <div class="brand-icon">🌐</div>
+          <div class="tag">
+            <b>B2B DATA GLOBAL</b>
+            <span>Verified Intelligence · Worldwide</span>
+          </div>
+        </a>
+
+        <ul class="menu" id="navMenu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+
+          <!-- Data Services Dropdown -->
+          <li class="has-dd">
+            <a href="services.html">Data Services <span class="caret">▼</span></a>
+            <div class="dd two">
+              <a href="services.html#email-appending">Email Appending</a>
+              <a href="services.html#social-media-appending">Social Media Appending</a>
+              <a href="services.html#job-title-appending">Job Title Appending</a>
+              <a href="services.html#email-validation">Email Validation Service</a>
+              <a href="services.html#database-cleansing">Database Cleansing</a>
+              <a href="services.html#data-enhancement">Data Enhancement</a>
+              <a href="services.html#data-enrichment">Data Enrichment Service</a>
+              <a href="services.html#lead-management">Lead Management Service</a>
+              <a href="services.html#market-research-data">Market Research Data</a>
+              <a href="services.html#customer-segmentation">Customer Segmentation</a>
+              <a href="services.html#data-migration">Data Migration Service</a>
+              <a href="services.html#data-integration">Data Integration Service</a>
+              <a href="services.html#data-mining">Data Mining Services</a>
+            </div>
+          </li>
+
+          <!-- Email Contact Mega Dropdown -->
+          <li class="has-dd">
+            <a href="mailing-lists.html">Email Contact <span class="caret">▼</span></a>
+            <div class="dd mega">
+              <div>
+                <span class="ddh">Industry Mailing Lists</span>
+                <a href="mailing-lists.html#it-industry">IT &amp; Software Industry</a>
+                <a href="mailing-lists.html#healthcare-industry">Healthcare Industry</a>
+                <a href="mailing-lists.html#financial-industry">Financial Industry</a>
+                <a href="mailing-lists.html#manufacturing-industry">Manufacturing Industry</a>
+                <a href="mailing-lists.html#construction-industry">Construction Industry</a>
+                <a href="mailing-lists.html#transportation-industry">Transportation Industry</a>
+                <a href="mailing-lists.html#retail-industry">Retail Industry</a>
+                <a href="mailing-lists.html#agriculture-industry">Agriculture Industry</a>
+              </div>
+              <div>
+                <span class="ddh">Email Contact Lists</span>
+                <a href="mailing-lists.html#by-job-title">By Job Title / C-Level</a>
+                <a href="mailing-lists.html#technology-list">Technology Users List</a>
+                <a href="mailing-lists.html#healthcare-list">Healthcare Email List</a>
+                <a href="mailing-lists.html#executive-email-list">Executives Email List</a>
+                <a href="mailing-lists.html#finance-list">Finance Decision-Makers</a>
+                <a href="mailing-lists.html#telecommunications-list">Telecom Operators</a>
+                <a href="mailing-lists.html#pharmaceutical-list">Pharmaceutical &amp; Biotech</a>
+                <a href="mailing-lists.html#education-list">Education &amp; Training</a>
+              </div>
+            </div>
+          </li>
+
+          <li><a href="events.html">Events Database</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div style="display: flex; align-items: center;">
+          <a class="getstarted" href="contact.html">Get In Touch</a>
+          <button id="menuBtn" type="button" aria-label="Toggle Menu">☰</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section with Interactive 3D Canvas Globe -->
+  <section class="hero" id="home">
+    <div class="wrap">
+      <div>
+        <div class="eb dot">Global B2B Data Intelligence</div>
+        <h1>Every market,<br>mapped to the <em>contact.</em></h1>
+        <p>B2B DATA turns the world's leading industries into verified, campaign-ready mailing lists and decision-maker contacts — clustered by geography, sector, and buying authority, refreshed continuously.</p>
+        <div>
+          <a class="hbtn a" href="#industries">Browse Industry Lists</a>
+          <a class="hbtn b" href="#services">Explore Data Services</a>
+        </div>
+        <div class="meta">
+          <div>
+            <b>75M+</b>
+            <span>Verified contacts</span>
+          </div>
+          <div>
+            <b>16</b>
+            <span>Industry lists</span>
+          </div>
+          <div>
+            <b>170+</b>
+            <span>Countries covered</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3D Interactive Globe Container -->
+      <div class="globe-box">
+        <canvas id="globe" aria-label="Interactive 3D Globe of global B2B event hubs and contacts"></canvas>
+        <div class="globe-hint">✦ Drag to rotate globe ✦</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3D Industry Intelligence Network Mesh Section -->
+  <section class="dark" id="network">
+    <div class="wrap mesh-split">
+      <div>
+        <div class="eb">Industry Intelligence Network</div>
+        <h2>Real-Time Verified Segment Mapping.</h2>
+        <p>Our continuous data pipeline enriches records with direct decision-maker emails, verified direct dials, firmographic details, and purchasing authority tiers across every industry we track.</p>
+        <p style="color: var(--muted); margin: 16px 0;">Rather than flat outdated files, every record is placed inside a living map of its sector, role, and corporate scale — allowing you to pinpoint exact enterprise buyers without manual filtering.</p>
+        <ul style="list-style: none; display: grid; gap: 14px; margin-top: 20px;">
+          <li><b>✓ Mapped continuously:</b> Records re-checked every 7 days so job changes and closures never persist.</li>
+          <li><b>✓ Multi-source verification:</b> Seven verification passes across multiple independent channels before release.</li>
+          <li><b>✓ Segmented for targeting:</b> Sector, company size, revenue, and seniority tagged on every single contact.</li>
+        </ul>
+      </div>
+
+      <div class="gpanel mesh-panel">
+        <div class="phead">Industry Intelligence 3D Mesh</div>
+        <div class="mesh-box">
+          <canvas id="segmentMesh" aria-label="Interactive 3D network segment mesh"></canvas>
+        </div>
+        <div class="pcap">
+          <b id="capTitle">Hover or drag to explore sectors</b>
+          <p id="capBody">Click any interactive node to view sector details and verified market coverage.</p>
+        </div>
+        <div class="msh-foot">
+          <div>
+            <b>16</b>
+            <span>Live Segments</span>
+          </div>
+          <div>
+            <b>170+</b>
+            <span>Countries</span>
+          </div>
+          <div>
+            <b>7-Step</b>
+            <span>Verification</span>
+          </div>
+          <a class="msh-cta" href="contact.html?type=sample">Request Sample →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 16 Industries Carousel Slider Section -->
+  <section class="dark alt" id="industries">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eb">Mailing Lists · By Industry</div>
+        <h2>Sixteen industries, one clean verified database.</h2>
+        <p>Every list is built from multi-verified sources and categorized by geography, revenue tier, and executive seniority.</p>
+      </div>
+
+      <div class="slider">
+        <button class="sl-btn" id="indPrev" type="button" aria-label="Previous">‹</button>
+        <div class="sl-view">
+          <div class="sl-track" id="indTrack">
+            <!-- 16 Industry Cards with Images -->
+            <a class="card-i" href="mailing-lists.html#it-industry">
+              <div class="pic"><img src="img/it.jpg" alt="IT &amp; Software Industry" /></div>
+              <div class="info">IT &amp; Software<span>Software · Cloud · SaaS</span></div>
+            </a>
+            <a class="card-i" href="mailing-lists.html#healthcare-industry">
+              <div class="pic"><img src="img/healthcare.jpg" alt="Healthcare Industry" /></div>
+              <div class="info">Healthcare Industry<span>Hospitals · Med-Tech · Pharma</span></div>
+            </a>
+            <a class="card-i" href="mailing-lists.html#manufacturing-industry">
+              <div class="pic"><img src="img/manufacturing.jpg" alt="Manufacturing Industry" /></div>
+              <div class="info">Manufacturing<span>Plants · OEMs · Suppliers</span></div>
+            </a>
+            <a class="card-i" href="mailing-lists.html#financial-industry">
+              <div class="pic"><img src="img/financial.jpg" alt="Financial Industry" /></div>
+              <div class="info">Financial Industry<span>Banking · Insurance · Fintech</span></div>
+            </a>
+            <a class="card-i" href="mailing-lists.html#construction-industry">
+              <div class="pic"><img src="img/construction.jpg" alt="Construction Industry" /></div>
+              <div class="info">Construction Industry<span>Contractors · Engineering</span></div>
+            </a>
+            <a class="card-i" href="mailing-lists.html#retail-industry">
+              <div class="pic"><img src="img/retail.jpg" alt="Retail Industry" /></div>
+              <div class="info">Retail Industry<span>Stores · E-Commerce · Buyers</span></div>
+            </a>
+            <a class="card-i" href="mailing-lists.html#transportation-industry">
+              <div class="pic"><img src="img/transport.jpg" alt="Transportation Industry" /></div>
+              <div class="info">Transportation<span>Logistics · Freight · Fleet</span></div>
+            </a>
+            <a class="card-i" href="mailing-lists.html#agriculture-industry">
+              <div class="pic"><img src="img/agriculture.jpg" alt="Agriculture Industry" /></div>
+              <div class="info">Agriculture Industry<span>Farms · Agritech · Forestry</span></div>
+            </a>
+            <a class="card-i" href="mailing-lists.html#wholesale-trade-industry">
+              <div class="pic"><img src="img/wholesale.jpg" alt="Wholesale Trade" /></div>
+              <div class="info">Wholesale Trade<span>Distributors · Durable Goods</span></div>
+            </a>
+            <a class="card-i" href="mailing-lists.html#business-services-industry">
+              <div class="pic"><img src="img/business.jpg" alt="Business Services" /></div>
+              <div class="info">Business Services<span>Consulting · Staffing · Agencies</span></div>
+            </a>
+            <a class="card-i" href="mailing-lists.html#textile-apparel-industry">
+              <div class="pic"><img src="img/textile.jpg" alt="Textile &amp; Apparel" /></div>
+              <div class="info">Textile &amp; Apparel<span>Mills · Fashion · Export</span></div>
+            </a>
+            <a class="card-i" href="mailing-lists.html#electronics-industry">
+              <div class="pic"><img src="img/electronics.jpg" alt="Electronics Industry" /></div>
+              <div class="info">Electronics Industry<span>Components · Devices · Systems</span></div>
+            </a>
+            <a class="card-i" href="mailing-lists.html#real-estate-industry">
+              <div class="pic"><img src="img/realestate.jpg" alt="Real Estate Industry" /></div>
+              <div class="info">Real Estate Industry<span>Developers · Brokers · Property</span></div>
+            </a>
+            <a class="card-i" href="mailing-lists.html#aerospace-industry">
+              <div class="pic"><img src="img/aerospace.jpg" alt="Aerospace Industry" /></div>
+              <div class="info">Aerospace Industry<span>Aviation · Defense · Space</span></div>
+            </a>
+            <a class="card-i" href="mailing-lists.html#chemical-industry">
+              <div class="pic"><img src="img/chemical.jpg" alt="Chemical Industry" /></div>
+              <div class="info">Chemical Industry<span>Process · Specialty · Petro</span></div>
+            </a>
+            <a class="card-i" href="mailing-lists.html#mining-industry">
+              <div class="pic"><img src="img/mining.jpg" alt="Mining Industry" /></div>
+              <div class="info">Mining Industry<span>Extraction · Minerals · Operations</span></div>
+            </a>
+          </div>
+        </div>
+        <button class="sl-btn" id="indNext" type="button" aria-label="Next">›</button>
+      </div>
+      <div class="sl-dots" id="indDots"></div>
+    </div>
+  </section>
+
+  <!-- Events & Attendees Hub Section -->
+  <section class="lightsec" id="events-hub">
+    <div class="wrap">
+      <div class="evx-head">
+        <div>
+          <div class="eb ink">Events &amp; Conferences Database</div>
+          <h2 style="font-size: clamp(28px, 3.2vw, 42px); margin: 10px 0;">Meet the people who will be in the room.</h2>
+          <p style="color: var(--muted); max-width: 54ch;">Before show doors open, know exactly who is exhibiting, attending, and sponsoring — complete with verified work emails and direct phone numbers.</p>
+        </div>
+        <div class="evx-stats">
+          <div>
+            <b>26,000+</b>
+            <span>Events covered</span>
+          </div>
+          <div>
+            <b>170+</b>
+            <span>Countries</span>
+          </div>
+          <div>
+            <b>3</b>
+            <span>Databases per event</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Moving Event Ticker -->
+      <div class="evx-ticker" aria-hidden="true">
+        <div class="evx-track">
+          <span>Lift Expo Poland <em>14–16 Oct 2026</em></span>
+          <span>Barcelona Textile Expo <em>7–9 Oct 2026</em></span>
+          <span>HR Southwest Conference <em>19–21 Oct 2026</em></span>
+          <span>Money20/20 USA <em>25–28 Oct 2026</em></span>
+          <span>BrauBeviale Nuremberg <em>10–12 Nov 2026</em></span>
+          <span>Web Summit Lisbon <em>8–11 Nov 2026</em></span>
+          <span>TechSummit Asia <em>9–11 Mar 2027</em></span>
+          <span>BuildCon Dubai <em>2–5 Nov 2027</em></span>
+          <span>Lift Expo Poland <em>14–16 Oct 2026</em></span>
+          <span>Barcelona Textile Expo <em>7–9 Oct 2026</em></span>
+          <span>HR Southwest Conference <em>19–21 Oct 2026</em></span>
+        </div>
+      </div>
+
+      <!-- 3 Key Databases -->
+      <div class="evx-dbs">
+        <a class="evx-db" href="events.html?type=attendees">
+          <i>🎟</i>
+          <div class="evx-tag">Visitor &amp; Attendee Database</div>
+          <h3>Everyone walking through the gates.</h3>
+          <p>Registered visitors and delegates with job title, company, industry, and multi-verified contact details — segmented by decision-making authority.</p>
+          <span class="evx-get">Request attendee list →</span>
+        </a>
+        <a class="evx-db" href="events.html?type=exhibitors">
+          <i>🏷</i>
+          <div class="evx-tag">Exhibitor Contacts Database</div>
+          <h3>Every company on the show floor.</h3>
+          <p>Exhibiting companies with booth coordinators, sales managers, and marketing executives — the teams actively investing to do business.</p>
+          <span class="evx-get">Request exhibitor list →</span>
+        </a>
+        <a class="evx-db" href="contact.html?type=sample">
+          <i>📣</i>
+          <div class="evx-tag">Sponsors &amp; Organisers</div>
+          <h3>The leaders shaping the agenda.</h3>
+          <p>Organizing committees, executive directors, and speaker coordinators for partnership pitches, sponsorship outreach, and speaking invitations.</p>
+          <span class="evx-get">Request organiser contacts →</span>
+        </a>
+      </div>
+
+      <!-- 4 Stages Workflow -->
+      <div class="gpanel" style="margin-top: 20px;">
+        <div class="phead">From a badge list to a full calendar</div>
+        <div class="evx-steps">
+          <div class="evx-step">
+            <div class="evx-num">01</div>
+            <b>Weeks before</b>
+            <p>Filter attendees and exhibitors by role and sector, sending targeted meeting invites while diaries are open.</p>
+          </div>
+          <div class="evx-step">
+            <div class="evx-num">02</div>
+            <b>Days before</b>
+            <p>Confirm scheduled appointments, map exhibitor booth locations, and plan your exact floor strategy.</p>
+          </div>
+          <div class="evx-step">
+            <div class="evx-num">03</div>
+            <b>During event</b>
+            <p>Reach key executives directly when they are between halls rather than waiting in line at crowded booths.</p>
+          </div>
+          <div class="evx-step">
+            <div class="evx-num">04</div>
+            <b>After event</b>
+            <p>Execute rapid post-event follow-up campaigns within 48 hours while meeting recall is at its highest.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Live Search & Categories Filter Section -->
+  <section class="lightsec alt2" id="search-section">
+    <div class="wrap" style="text-align: center;">
+      <div class="eb ink" style="justify-content: center;">Search Within Our Curated Lists</div>
+      <h2 style="font-size: clamp(26px, 3.2vw, 40px); margin: 12px 0 24px;">Find the exact list you need.</h2>
+
+      <div class="search-wrap">
+        <div class="search-row">
+          <input id="evSearch" type="search" placeholder="Search an event name, city, or industry…" autocomplete="off" />
+          <button id="evSearchBtn" type="button">Search</button>
+        </div>
+        <div class="sg" id="evSuggest"></div>
+      </div>
+
+      <div class="eb ink" style="justify-content: center; margin-top: 40px;">Industry-Wise Data Categories</div>
+      <div class="evi-row">
+        <a class="evi" href="mailing-lists.html#healthcare-industry"><i>🏥</i>Healthcare</a>
+        <a class="evi" href="mailing-lists.html#it-industry"><i>💻</i>Technology</a>
+        <a class="evi" href="mailing-lists.html#financial-industry"><i>💰</i>Finance</a>
+        <a class="evi" href="events.html"><i>✈️</i>Tourism</a>
+        <a class="evi" href="events.html"><i>🍴</i>Food &amp; Bev</a>
+        <a class="evi" href="mailing-lists.html#textile-apparel-industry"><i>👗</i>Fashion</a>
+        <a class="evi" href="mailing-lists.html#transportation-industry"><i>🚗</i>Automotive</a>
+        <a class="evi" href="mailing-lists.html#construction-industry"><i>🏗️</i>Construction</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Data Services & Live Pipeline Animation -->
+  <section class="dark" id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eb">Data Services Pipeline</div>
+        <h2>Your database, kept alive &amp; verified.</h2>
+        <p>B2B lists decay the moment they are exported. Our services ensure your CRM remains accurate, deduplicated, and deliverable.</p>
+      </div>
+
+      <div class="flow-split">
+        <!-- Live Animated Pipeline Canvas -->
+        <div class="dv">
+          <div class="dv-bar">
+            <span>● LIVE DATA PIPELINE</span>
+            <div>
+              <button id="streamPlayBtn" class="hbtn" style="padding: 4px 10px; font-size: 11px; background: rgba(255,255,255,0.1); color: #fff;">⏸</button>
+              <button id="streamSpeedBtn" class="hbtn" style="padding: 4px 10px; font-size: 11px; background: rgba(255,255,255,0.1); color: #fff;">1×</button>
+            </div>
+          </div>
+          <div class="dv-screen">
+            <canvas id="pipelineStream"></canvas>
+          </div>
+          <div class="dv-hud">
+            <div><span id="hudIn">14,820</span><i>Records in</i></div>
+            <div><span id="hudValid">13,910</span><i>Verified</i></div>
+            <div><span id="hudRejected">910</span><i>Filtered</i></div>
+            <div><span id="hudOut">13,910</span><i>Delivered</i></div>
+          </div>
+        </div>
+
+        <!-- 13 Services Cards Grid -->
+        <div class="grid-sv">
+          <div class="card-s">
+            <span class="tick">SVC/01</span>
+            <h3>Email Appending</h3>
+            <p>Match missing work emails to existing customer &amp; prospect records with 95% deliverability.</p>
+          </div>
+          <div class="card-s">
+            <span class="tick">SVC/02</span>
+            <h3>Email Validation</h3>
+            <p>Filter spam traps, invalid mailboxes, and catch-all risks to protect sender reputation.</p>
+          </div>
+          <div class="card-s">
+            <span class="tick">SVC/03</span>
+            <h3>Database Cleansing</h3>
+            <p>Remove duplicate rows, dead companies, and formatting errors across your sales pipeline.</p>
+          </div>
+          <div class="card-s">
+            <span class="tick">SVC/04</span>
+            <h3>Data Enrichment</h3>
+            <p>Append firmographics, LinkedIn profiles, corporate hierarchy, and direct dials.</p>
+          </div>
+          <div class="card-s">
+            <span class="tick">SVC/05</span>
+            <h3>Customer Segmentation</h3>
+            <p>Divide audiences by industry, revenue, and buying power for high-conversion ABM.</p>
+          </div>
+          <div class="card-s">
+            <span class="tick">SVC/06</span>
+            <h3>Lead Management</h3>
+            <p>Score, route, and enrich inbound prospects with real-time intent intelligence.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Accuracy & 7-Step Verification Section -->
+  <section class="lightsec" id="accuracy">
+    <div class="wrap">
+      <div class="section-head">
+        <div class="eb ink">Trust &amp; Accuracy</div>
+        <h2>Built for accuracy, refreshed in real time.</h2>
+        <p>A B2B contact list is only as good as the day it was verified. Here is how B2B DATA collects, validates, and guarantees data integrity.</p>
+      </div>
+
+      <div class="feat4">
+        <div class="feat">
+          <i>◎</i>
+          <h3>Extensive Coverage</h3>
+          <p>Firmographics, decision-maker job titles, direct dials, and verified emails across 170+ countries.</p>
+        </div>
+        <div class="feat">
+          <i>↻</i>
+          <h3>7-Day Rolling Refresh</h3>
+          <p>Continuous database sweeps guarantee you reach contacts currently at their stated role.</p>
+        </div>
+        <div class="feat">
+          <i>⇄</i>
+          <h3>Automated Enrichment</h3>
+          <p>Upload CSVs or integrate CRM two-way sync to append missing fields seamlessly.</p>
+        </div>
+        <div class="feat">
+          <i>✓</i>
+          <h3>Full Compliance</h3>
+          <p>Strictly compliant with GDPR, CCPA, and CAN-SPAM regulations with instant opt-out honoring.</p>
+        </div>
+      </div>
+
+      <!-- Sample Preview Table with Built vs Planned Switcher -->
+      <div class="sb-file">
+        <div class="sb-fh">
+          <code>sample_data_preview.csv · Verified B2B Sample</code>
+          <div class="sb-tog">
+            <button type="button" data-view="built" class="on">Built records</button>
+            <button type="button" data-view="plan">Planned schema</button>
+          </div>
+        </div>
+        <div style="overflow-x: auto;">
+          <table class="sb-t">
+            <thead>
+              <tr>
+                <th>Company</th>
+                <th>Website</th>
+                <th>Executive Name</th>
+                <th>Title</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Location</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Northwind Cloud Systems</td>
+                <td>northwindcloud.com</td>
+                <td>M*** Z***</td>
+                <td>Chief Technology Officer</td>
+                <td>m***@n***.com</td>
+                <td>+1 (570) ***-5584</td>
+                <td>West Palm Beach, FL, USA</td>
+              </tr>
+              <tr>
+                <td>Vertex Software Group</td>
+                <td>vertexsoftware.com</td>
+                <td>S*** T***</td>
+                <td>VP Information Technology</td>
+                <td>s***@v***.com</td>
+                <td>+1 (901) ***-9090</td>
+                <td>Collierville, TN, USA</td>
+              </tr>
+              <tr>
+                <td>Meridian Data Services</td>
+                <td>meridiandata.com</td>
+                <td>K*** F***</td>
+                <td>Director of IT Infrastructure</td>
+                <td>k***@m***.com</td>
+                <td>+1 (305) ***-4419</td>
+                <td>Miami, FL, USA</td>
+              </tr>
+              <tr>
+                <td>Rheinwerk Solutions GmbH</td>
+                <td>rheinwerk-it.de</td>
+                <td>M*** M***</td>
+                <td>Head of Enterprise Systems</td>
+                <td>m***@r***.de</td>
+                <td>+49 151 ***-3897</td>
+                <td>Ratingen, Germany</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="sb-fh" style="font-size: 12px; color: var(--muted);">
+          <span id="sampleCap">Records sourced into one consistent, CRM-ready verified schema</span>
+          <a href="contact.html?type=sample" style="color: var(--gold-soft); font-weight: 700;">Request Unmasked Sample →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive FAQ Accordion Section -->
+  <section class="lightsec alt2" id="faq">
+    <div class="wrap">
+      <div class="section-head" style="text-align: center; margin: 0 auto 40px;">
+        <div class="eb ink" style="justify-content: center;">Frequently Asked Questions</div>
+        <h2>Everything you need to know about our data.</h2>
+      </div>
+
+      <div class="faq-grid">
+        <div class="faq">
+          <button class="faq-q" type="button">Where does the events and attendee data come from? <span>+</span></button>
+          <div class="faq-a"><p>We compile data from direct attendee registrations, official trade show organizers, corporate SEC filings, verified partner networks, and public business directories.</p></div>
+        </div>
+        <div class="faq">
+          <button class="faq-q" type="button">How frequently is your database updated? <span>+</span></button>
+          <div class="faq-a"><p>The entire database undergoes a comprehensive sweep every 7 days. Signal-based triggers (such as job changes and email bounces) update records in real time.</p></div>
+        </div>
+        <div class="faq">
+          <button class="faq-q" type="button">What is your policy for bounced email contacts? <span>+</span></button>
+          <div class="faq-a"><p>We guarantee a 95% deliverability rate. Any hard bounce reported within 7 days is replaced with fresh verified records or refunded pro-rata.</p></div>
+        </div>
+        <div class="faq">
+          <button class="faq-q" type="button">Can we request custom datasets for specific industries? <span>+</span></button>
+          <div class="faq-a"><p>Yes! We routinely build customized datasets filtered by exact job titles, company revenue, tech stack, and geographic location.</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom Call to Action Banner -->
+  <section class="dark" id="contact-banner">
+    <div class="wrap">
+      <div class="gpanel" style="padding: 48px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px;">
+        <div>
+          <div class="eb" style="color: var(--gold-accent);">Ready to Scale Your Outreach?</div>
+          <h2 style="margin: 10px 0 6px;">Tell us the market. We'll map the contacts.</h2>
+          <p style="color: var(--muted);">Request a complimentary verified sample dataset customized to your target audience.</p>
+        </div>
+        <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+          <a class="hbtn a" href="contact.html?type=sample">Request Sample Data</a>
+          <button class="hbtn b" type="button" data-open-modal="requirement">Customize Your List</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer with Particle Canvas -->
+  <footer>
+    <canvas id="fparticles" aria-hidden="true"></canvas>
+    <div class="wrap">
+      <div class="f-grid">
+        <div>
+          <div class="brand" style="color: #fff; margin-bottom: 16px;">
+            <div class="brand-icon">🌐</div>
+            <div class="tag">
+              <b>B2B DATA GLOBAL</b>
+              <span style="color: var(--gold-accent);">Verified B2B Intelligence</span>
+            </div>
+          </div>
+          <p style="color: #8fc9be; font-size: 13.5px; max-width: 32ch; line-height: 1.5;">Campaign-ready attendee lists, exhibitor intelligence, and high-deliverability B2B contact data across 170+ countries.</p>
+          <div style="margin-top: 18px; display: flex; flex-direction: column; gap: 6px;">
+            <a href="tel:+916204529785" style="color: #eafaf4; font-family: var(--font-mono); font-size: 13px;">📞+91 6204529785</a>
+            <a href="mailto:b2bdataglobal@gmail.com" style="color: #eafaf4; font-family: var(--font-mono); font-size: 13px;">✉ b2bdataglobal@gmail.com</a>
+          </div>
+        </div>
+
+        <div>
+          <div class="f-off-frame">
+            <h4 style="font-family: var(--font-mono); color: var(--gold-accent); margin-bottom: 14px; text-transform: uppercase; font-size: 12px; letter-spacing: 0.14em;">Our Global Offices</h4>
+            <div class="f-off-grid">
+              <div class="f-off">
+                <b>United States</b>
+                <p>(525) RT 73 N Ste 104, Marlton, NJ 08053, USA</p>
+              </div>
+              <div class="f-off">
+                <b>United Kingdom</b>
+                <p>Jemmison Street, Crick, NN1059D 7UD, UK</p>
+              </div>
+              <div class="f-off">
+                <b>Europe (Ireland)</b>
+                <p>Eastpoint Business Park, Co. Dublin, D03 Y8C5, Ireland</p>
+              </div>
+              <div class="f-off">
+                <b>Canada</b>
+                <p>Race Street, Suite 1420, Ottawa, ON, K1P 1H4, Canada</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="f-bottom">
+        <span>© 2026 B2B DATA GLOBAL LLC. All rights reserved.</span>
+        <span>
+          <a href="privacy.html">Privacy Policy</a> · 
+          <a href="terms.html">Terms &amp; Conditions</a> · 
+          <a href="refund.html">Refund Policy</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky Quick Action Rail -->
+  <div class="xp-rail" id="quickRail">
+    <button type="button" data-open-modal="requirement" data-prefill="Quote">Get Quote</button>
+    <button type="button" data-open-modal="requirement" data-prefill="Custom Database">Customize</button>
+    <a href="contact.html?type=sample">Free Sample</a>
+  </div>
+
+  <!-- Floating WhatsApp Button -->
+  <a class="wa-float" id="waFloat" href="https://wa.me/916204529785?text=Hello%20B2B%20DATA%2C%20I%20would%20like%20to%20request%20sample%20data." target="_blank" rel="noopener noreferrer" aria-label="Chat with us on WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5.1-1.3A10 10 0 1 0 12 2zm0 1.8a8.2 8.2 0 1 1-4.2 15.3l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 0 1 12 3.8zm-3.1 4c-.2 0-.5 0-.7.3-.2.3-.9.9-.9 2.1s.9 2.4 1 2.6c.1.2 1.8 2.9 4.5 4 2.2.9 2.7.7 3.2.7.5-.1 1.6-.7 1.8-1.3.2-.6.2-1.2.2-1.3-.1-.1-.2-.2-.5-.3l-1.8-.9c-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.1-.2 0-.4.1-.5l.6-.7c.1-.2.1-.3.2-.5v-.4L10.5 8c-.1-.3-.3-.3-.5-.3h-1.1z"/></svg>
+  </a>
+
+  <!-- Multi-Step Requirement Modal Popup -->
+  <div class="rq-bg" id="requirementModal" role="dialog" aria-modal="true">
+    <div class="rq">
+      <button class="rq-x" type="button" data-close-modal aria-label="Close">×</button>
+
+      <!-- Step 1: Requirement Specification -->
+      <div id="modalStep1">
+        <h3 style="font-size: 22px; margin-bottom: 6px;">Tell us about your requirement</h3>
+        <p style="color: var(--muted); font-size: 13.5px; margin-bottom: 16px;">This form is for businesses evaluating targeted B2B, attendee, or industry database purchases.</p>
+
+        <label class="rq-l" for="reqNeed">What best describes your requirement? *</label>
+        <select class="rq-sel" id="reqNeed">
+          <option value="">- Please select -</option>
+          <option value="Purchase an Attendee / Exhibitor Database">Purchase an Attendee / Exhibitor Database</option>
+          <option value="Purchase ICP-Based B2B Email Database">Purchase ICP-Based B2B Email Database</option>
+          <option value="Enrich or Verify My Existing Database">Enrich or Verify My Existing Database</option>
+          <option value="Build a Custom Industry Database">Build a Custom Industry Database</option>
+        </select>
+
+        <label class="rq-l" for="reqWhen">When do you plan to use this data? *</label>
+        <select class="rq-sel" id="reqWhen">
+          <option value="">- Please select -</option>
+          <option value="Within a week">Within a week</option>
+          <option value="Within 30 days">Within 30 days</option>
+          <option value="Within 3 months">Within 3 months</option>
+          <option value="Just exploring">Just exploring</option>
+        </select>
+
+        <label class="rq-l">Primary Use Case</label>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: 13px; margin-top: 6px;">
+          <label><input type="checkbox" value="Outbound Sales" /> Outbound Sales</label>
+          <label><input type="checkbox" value="Email Marketing" /> Email Marketing</label>
+          <label><input type="checkbox" value="ABM Campaigns" /> ABM Campaigns</label>
+          <label><input type="checkbox" value="Market Research" /> Market Research</label>
+        </div>
+
+        <button class="rq-go" id="modalNext" type="button">Next Step →</button>
+      </div>
+
+      <!-- Step 2: Contact Details -->
+      <div id="modalStep2" style="display: none;">
+        <h3 style="font-size: 22px; margin-bottom: 6px;">Your contact details</h3>
+        <p style="color: var(--muted); font-size: 13.5px; margin-bottom: 16px;">We confirm feasibility and send you sample records within 1 business day.</p>
+
+        <label class="rq-l" for="reqName">Full name *</label>
+        <input class="rq-in" id="reqName" type="text" placeholder="Your name" />
+
+        <label class="rq-l" for="reqEmail">Work email *</label>
+        <input class="rq-in" id="reqEmail" type="email" placeholder="you@company.com" />
+
+        <label class="rq-l" for="reqCompany">Company name</label>
+        <input class="rq-in" id="reqCompany" type="text" placeholder="Company Ltd" />
+
+        <input type="hidden" id="reqTopic" value="" />
+
+        <div style="display: flex; gap: 10px; margin-top: 20px;">
+          <button class="hbtn b" id="modalBack" type="button" style="flex: 1; margin: 0;">← Back</button>
+          <button class="rq-go" id="modalSend" type="button" style="flex: 2; margin: 0;">Submit Requirement</button>
+        </div>
+      </div>
+
+      <!-- Step Done: Confirmation -->
+      <div id="modalDone" style="display: none; text-align: center; padding: 20px 0;">
+        <div style="font-size: 48px; color: var(--gold-soft); margin-bottom: 12px;">✓</div>
+        <h3 style="font-size: 22px; margin-bottom: 8px;">Thank You — Requirement Received</h3>
+        <p style="color: var(--muted); font-size: 14.5px; margin-bottom: 24px;">Our research team is reviewing your requirements and will reply with sample records within one business day.</p>
+        <button class="hbtn a" type="button" data-close-modal>Close Window</button>
+      </div>
+
+      <p id="modalNote" style="color: #b23b3b; font-size: 13px; margin-top: 10px; text-align: center;"></p>
+    </div>
+  </div>
+
+  <!-- Canvas Visualizers & Logic -->
+  <script src="js/globe.js"></script>
+  <script src="js/mesh.js"></script>
+  <script src="js/stream.js"></script>
+  <script src="js/events-data.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>

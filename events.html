@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Events &amp; Exhibitor Database | B2B DATA GLOBAL LLC</title>
+  <meta name="description" content="Search verified attendee and exhibitor databases across 26,000+ trade shows and conferences. Filter by date, sector, and counts." />
+  <link rel="icon" type="image/png" href="brand/favicon-5-gold-globe.png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .ev-card {
+      background: var(--panel);
+      border: 1px solid var(--gold-line);
+      border-radius: 18px;
+      padding: 22px;
+      margin-bottom: 16px;
+      transition: all 0.2s;
+    }
+    .ev-card:hover {
+      border-color: var(--gold);
+      box-shadow: 0 10px 24px -10px rgba(14, 124, 107, 0.3);
+    }
+    .ev-badge {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      background: rgba(14, 124, 107, 0.12);
+      color: var(--gold-soft);
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Scroll Progress Bar -->
+  <div class="progress" id="scrollBar"></div>
+
+  <!-- Header -->
+  <header>
+    <div class="wrap">
+      <nav>
+        <a class="brand" href="index.html">
+          <div class="brand-icon">🌐</div>
+          <div class="tag">
+            <b>B2B DATA GLOBAL</b>
+            <span>Verified Intelligence · Worldwide</span>
+          </div>
+        </a>
+
+        <ul class="menu" id="navMenu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Data Services</a></li>
+          <li><a href="mailing-lists.html">Mailing Lists</a></li>
+          <li><a href="events.html" style="color: var(--gold-soft);">Events Database</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div style="display: flex; align-items: center;">
+          <a class="getstarted" href="contact.html">Get In Touch</a>
+          <button id="menuBtn" type="button" aria-label="Toggle Menu">☰</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Events Search Hero -->
+  <section class="lightsec" style="padding-top: 50px;">
+    <div class="wrap">
+      <div class="eb ink">Verified Events Intelligence</div>
+      <h1 style="font-size: clamp(32px, 4vw, 54px); margin: 12px 0 16px;">The People Behind Every Badge.</h1>
+      <p style="color: var(--muted); font-size: 17px; max-width: 60ch;">Curated exhibitor lists from top global exhibitions, sales-qualified attendee data, and organizer contacts — captured as structured, campaign-ready records.</p>
+    </div>
+  </section>
+
+  <!-- Filter & Events Listing Grid -->
+  <section class="lightsec alt2" style="padding-top: 40px;">
+    <div class="wrap">
+      <div style="display: grid; grid-template-columns: 280px 1fr; gap: 28px; align-items: start;">
+        
+        <!-- Sidebar Filters -->
+        <aside class="gpanel">
+          <h3 style="font-size: 18px; margin-bottom: 16px;">Filter Events</h3>
+
+          <label style="font-size: 13px; font-weight: 700; display: block; margin-bottom: 6px;">Search Event Name</label>
+          <input id="eventsFilterQuery" type="search" placeholder="Type event or city..." class="rq-in" style="margin-bottom: 16px;" />
+
+          <label style="font-size: 13px; font-weight: 700; display: block; margin-bottom: 6px;">Filter By Industry</label>
+          <select id="eventsFilterIndustry" class="rq-sel" style="margin-bottom: 16px;">
+            <option value="All">All Industries</option>
+            <option value="Technology">Technology</option>
+            <option value="Healthcare">Healthcare</option>
+            <option value="Manufacturing">Manufacturing</option>
+            <option value="Financial">Financial &amp; Banking</option>
+            <option value="Construction">Construction</option>
+            <option value="Retail">Retail &amp; Commerce</option>
+            <option value="Textile">Textile &amp; Apparel</option>
+            <option value="Food & Beverages">Food &amp; Beverages</option>
+            <option value="Business">Business Services</option>
+          </select>
+
+          <button id="resetEventsBtn" type="button" class="hbtn b" style="width: 100%; margin: 0; text-align: center;">Reset Filters</button>
+        </aside>
+
+        <!-- Events List Container -->
+        <div>
+          <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
+            <span id="eventsCountLabel" style="font-family: var(--font-mono); font-size: 13px; color: var(--gold-soft); text-transform: uppercase; font-weight: 700;">Loading events…</span>
+            <a href="contact.html?type=sample" style="color: var(--gold-soft); font-size: 13px; font-weight: 700;">Request Custom Event List →</a>
+          </div>
+
+          <div id="eventsListCards">
+            <!-- Populated dynamically via events-data.js -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="wrap">
+      <div class="f-bottom">
+        <span>© 2026 B2B DATA GLOBAL LLC. All rights reserved.</span>
+        <span>
+          <a href="index.html">Home</a> · 
+          <a href="about.html">About</a> · 
+          <a href="services.html">Services</a> · 
+          <a href="contact.html">Contact</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/events-data.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Client-side dynamic event rendering
+    document.addEventListener('DOMContentLoaded', () => {
+      const listContainer = document.getElementById('eventsListCards');
+      const countLabel = document.getElementById('eventsCountLabel');
+      const queryInput = document.getElementById('eventsFilterQuery');
+      const indSelect = document.getElementById('eventsFilterIndustry');
+      const resetBtn = document.getElementById('resetEventsBtn');
+
+      // Check URL parameters e.g. events.html?q=TechSummit
+      const params = new URLSearchParams(window.location.search);
+      if (params.get('q')) {
+        queryInput.value = params.get('q');
+      }
+
+      function renderEvents() {
+        const q = queryInput.value.trim().toLowerCase();
+        const ind = indSelect.value;
+        const events = (window.B2B_EVENTS_DATA || []).filter(e => {
+          const matchQ = !q || e.name.toLowerCase().includes(q) || e.city.toLowerCase().includes(q) || e.country.toLowerCase().includes(q);
+          const matchInd = !ind || ind === 'All' || e.industry === ind;
+          return matchQ && matchInd;
+        });
+
+        countLabel.textContent = `${events.length} Events Sourced & Ready`;
+
+        if (events.length === 0) {
+          listContainer.innerHTML = `
+            <div class="gpanel" style="text-align: center; padding: 40px;">
+              <h3>No events match your criteria.</h3>
+              <p style="color: var(--muted); margin: 8px 0 16px;">We can research and compile customized attendee lists for any unlisted event worldwide.</p>
+              <a href="contact.html?type=sample" class="hbtn a">Request Custom Research</a>
+            </div>
+          `;
+          return;
+        }
+
+        listContainer.innerHTML = events.map(ev => `
+          <div class="ev-card">
+            <div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 14px; margin-bottom: 10px;">
+              <div>
+                <span class="ev-badge">${ev.industry} · ${ev.kind || 'Trade Show'}</span>
+                <h3 style="font-size: 20px; margin: 8px 0 4px;">${ev.name}</h3>
+                <p style="color: var(--muted); font-size: 14px;">📍 ${[ev.venue, ev.city, ev.country].filter(Boolean).join(', ')} · 📅 ${ev.start} to ${ev.end}</p>
+              </div>
+              <a href="contact.html?type=sample&event=${encodeURIComponent(ev.name)}" class="hbtn a" style="padding: 8px 18px; font-size: 12px; white-space: nowrap;">Request List</a>
+            </div>
+            <div style="display: flex; gap: 20px; font-family: var(--font-mono); font-size: 13px; color: var(--gold-soft); background: rgba(14, 124, 107, 0.08); padding: 10px 14px; border-radius: 10px;">
+              <span>Attendees: <b>${ev.attendees ? ev.attendees.toLocaleString() : 'On Request'}</b></span>
+              <span>Exhibitors: <b>${ev.exhibitors ? ev.exhibitors.toLocaleString() : 'On Request'}</b></span>
+              <span>Price: <b>${ev.price ? '$' + ev.price : 'Custom Quote'}</b></span>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      queryInput.addEventListener('input', renderEvents);
+      indSelect.addEventListener('change', renderEvents);
+      resetBtn.addEventListener('click', () => {
+        queryInput.value = '';
+        indSelect.value = 'All';
+        renderEvents();
+      });
+
+      renderEvents();
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | B2B DATA GLOBAL LLC — Inquire &amp; Request Samples</title>
+  <meta name="description" content="Get in touch with B2B DATA GLOBAL LLC. Request a free sample database, talk to our account strategists, or register as a data partner." />
+  <link rel="icon" type="image/png" href="brand/favicon-5-gold-globe.png" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .ct-card-btn {
+      background: #fff;
+      border: 1px solid var(--gold-line);
+      border-radius: 14px;
+      padding: 14px;
+      cursor: pointer;
+      text-align: left;
+      transition: all 0.2s;
+    }
+    .ct-card-btn.active {
+      border-color: var(--gold);
+      background: rgba(14, 124, 107, 0.08);
+      box-shadow: 0 0 0 2px var(--gold);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Scroll Progress Bar -->
+  <div class="progress" id="scrollBar"></div>
+
+  <!-- Header -->
+  <header>
+    <div class="wrap">
+      <nav>
+        <a class="brand" href="index.html">
+          <div class="brand-icon">🌐</div>
+          <div class="tag">
+            <b>B2B DATA GLOBAL</b>
+            <span>Verified Intelligence · Worldwide</span>
+          </div>
+        </a>
+
+        <ul class="menu" id="navMenu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Data Services</a></li>
+          <li><a href="mailing-lists.html">Mailing Lists</a></li>
+          <li><a href="events.html">Events Database</a></li>
+          <li><a href="contact.html" style="color: var(--gold-soft);">Contact</a></li>
+        </ul>
+
+        <div style="display: flex; align-items: center;">
+          <a class="getstarted" href="contact.html">Get In Touch</a>
+          <button id="menuBtn" type="button" aria-label="Toggle Menu">☰</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contact Section -->
+  <section class="lightsec" style="padding-top: 50px;">
+    <div class="wrap">
+      <div class="eb ink">Contact Our Data Strategists</div>
+      <h1 style="font-size: clamp(32px, 4vw, 54px); margin: 12px 0 16px;">Tell us the market. We'll map the contacts.</h1>
+      <p style="color: var(--muted); font-size: 17px; max-width: 60ch; margin-bottom: 36px;">Pick what you need, share your ideal customer profile, and our research specialists will reply within one business day with verified sample records.</p>
+
+      <div style="display: grid; grid-template-columns: 1.5fr 1fr; gap: 32px; align-items: start;">
+        
+        <!-- Main Form Container -->
+        <div class="gpanel" style="padding: 32px;">
+          <h3 style="font-size: 20px; margin-bottom: 16px;">1. Select Request Type</h3>
+          
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 24px;">
+            <button class="ct-card-btn active" type="button" data-val="Sample Request">
+              <b style="display: block; font-size: 14.5px;">⤓ Sample Data Request</b>
+              <span style="font-size: 12px; color: var(--muted);">Receive free verified preview records</span>
+            </button>
+            <button class="ct-card-btn" type="button" data-val="Buyer Inquiry">
+              <b style="display: block; font-size: 14.5px;">◎ Buyer Enterprise Quote</b>
+              <span style="font-size: 12px; color: var(--muted);">Discuss pricing and large volumes</span>
+            </button>
+            <button class="ct-card-btn" type="button" data-val="Supplier Partnership">
+              <b style="display: block; font-size: 14.5px;">⚙ Supplier / Partner</b>
+              <span style="font-size: 12px; color: var(--muted);">Offer data or enrichment services</span>
+            </button>
+            <button class="ct-card-btn" type="button" data-val="General Inquiry">
+              <b style="display: block; font-size: 14.5px;">✉ General Inquiry</b>
+              <span style="font-size: 12px; color: var(--muted);">Questions about our processes</span>
+            </button>
+          </div>
+
+          <h3 style="font-size: 20px; margin-bottom: 16px;">2. Your Information</h3>
+          <form id="contactForm" onsubmit="event.preventDefault(); submitContact();">
+            <input type="hidden" id="cRequestType" value="Sample Request" />
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px;">
+              <div>
+                <label style="font-size: 13px; font-weight: 700; display: block; margin-bottom: 6px;">Your Name *</label>
+                <input class="rq-in" id="cName" type="text" placeholder="John Doe" required />
+              </div>
+              <div>
+                <label style="font-size: 13px; font-weight: 700; display: block; margin-bottom: 6px;">Work Email *</label>
+                <input class="rq-in" id="cEmail" type="email" placeholder="john@company.com" required />
+              </div>
+            </div>
+
+            <div style="margin-bottom: 14px;">
+              <label style="font-size: 13px; font-weight: 700; display: block; margin-bottom: 6px;">Company Name</label>
+              <input class="rq-in" id="cCompany" type="text" placeholder="Acme Technologies" />
+            </div>
+
+            <div style="margin-bottom: 20px;">
+              <label style="font-size: 13px; font-weight: 700; display: block; margin-bottom: 6px;">Which list, event, or service are you interested in? *</label>
+              <textarea class="rq-in" id="cMessage" rows="4" placeholder="e.g. Please share attendee sample records for Money20/20 or IT directors in Germany..." required></textarea>
+            </div>
+
+            <button class="hbtn a" id="cSubmitBtn" type="submit" style="width: 100%; border: 0; padding: 14px; font-size: 14px;">Send Message →</button>
+            <p id="cStatus" style="font-size: 13px; text-align: center; margin-top: 12px; color: var(--gold-soft); font-weight: 700;"></p>
+          </form>
+        </div>
+
+        <!-- Sidebar Direct Contact Tiles -->
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+          <div class="gpanel">
+            <h4 style="font-size: 16px; margin-bottom: 12px;">Direct Channels</h4>
+            <div style="display: grid; gap: 12px;">
+              <a href="mailto:sales@b2bdatallc.com" style="display: flex; align-items: center; gap: 10px; color: var(--ink); font-size: 14px;">
+                <span style="font-size: 20px;">✉</span>
+                <div><b>Email Sales</b><div style="font-size: 12px; color: var(--muted);">sales@b2bdatallc.com</div></div>
+              </a>
+              <a href="tel:+19083203081" style="display: flex; align-items: center; gap: 10px; color: var(--ink); font-size: 14px;">
+                <span style="font-size: 20px;">☎</span>
+                <div><b>Call Direct</b><div style="font-size: 12px; color: var(--muted);">+1 (908) 320-3081 (Mon–Fri)</div></div>
+              </a>
+              <a href="https://wa.me/19083203081" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; gap: 10px; color: #25d366; font-size: 14px;">
+                <span style="font-size: 20px;">●</span>
+                <div><b>WhatsApp Messenger</b><div style="font-size: 12px; color: var(--muted);">Immediate response for quick inquiries</div></div>
+              </a>
+            </div>
+          </div>
+
+          <div class="gpanel">
+            <h4 style="font-size: 16px; margin-bottom: 10px;">Our SLA Commitment</h4>
+            <ul style="list-style: none; display: grid; gap: 8px; font-size: 13.5px; color: var(--muted);">
+              <li><b>✓ 1-Day Response:</b> Quotations and sample data supplied within 24 business hours.</li>
+              <li><b>✓ 95% Deliverability:</b> Guaranteed on all verified email datasets.</li>
+              <li><b>✓ Privacy Aligned:</b> GDPR, CCPA, and CAN-SPAM compliant.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="wrap">
+      <div class="f-bottom">
+        <span>© 2026 B2B DATA GLOBAL LLC. All rights reserved.</span>
+        <span>
+          <a href="index.html">Home</a> · 
+          <a href="about.html">About</a> · 
+          <a href="services.html">Services</a> · 
+          <a href="events.html">Events</a>
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Tab selector
+    document.querySelectorAll('.ct-card-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.ct-card-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById('cRequestType').value = btn.getAttribute('data-val');
+      });
+    });
+
+    // Check event URL param
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.get('event')) {
+      const msg = document.getElementById('cMessage');
+      if (msg) msg.value = `I am interested in acquiring the attendee & exhibitor database for "${urlParams.get('event')}". Please share sample records and volume counts.`;
+    }
+
+    function submitContact() {
+      const btn = document.getElementById('cSubmitBtn');
+      const status = document.getElementById('cStatus');
+      btn.disabled = true;
+      btn.textContent = 'Transmitting Request…';
+
+      setTimeout(() => {
+        status.textContent = '✓ Thank you! Your request has been transmitted. An account specialist will reply within 1 business day.';
+        btn.disabled = false;
+        btn.textContent = 'Send Message →';
+        document.getElementById('contactForm').reset();
+      }, 800);
+    }
+  </script>
+</body>
+</html>
